@@ -29,16 +29,25 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+#항상 app을 등록하기 위해 만든파일을 알려줘야 함
+CUSTOM_APPS = [
+    'houses.apps.HousesConfig',
+    "users.apps.UsersConfig"
+]
 
-INSTALLED_APPS = [
+
+
+SYSTEM_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'houses.apps.HousesConfig',
+    
 ]
+
+INSTALLED_APPS = CUSTOM_APPS + SYSTEM_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,3 +131,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#Auth
+#우리만의 user 모델을 쓰겠다고 알리기!
+AUTH_USER_MODEL = "users.User"
+#사용자가 이미 있으면 쓸수가 없다
+#그래서 전에 migrations 파일을 지워줘야 한다
