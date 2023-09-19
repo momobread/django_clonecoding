@@ -11,7 +11,7 @@ class User(AbstractUser):
     # 건드리고 싶지 않은 필드는 editable하면 안됨(어차피 관리자 페이지에 안나타남 /#5-2)
     first_name = models.CharField(max_length =150,editable=False)
     last_name = models.CharField(max_length=150,editable=False)
-    name = models.CharField(max_length=150)
+    name = models.CharField(max_length=150,default="")
     is_host = models.BooleanField(default=True)
     
     
