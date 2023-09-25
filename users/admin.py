@@ -12,7 +12,9 @@ class CustomUserAdmin(UserAdmin):
            ( "Profile",
                  {
                      "fields":("username","password",
-                               "email","is_host"),
+                               "email","is_host",
+                               "avator","gender",
+                               "language_A","currency"),
                      "classes" :("wide",)
                 },
                  ),
@@ -43,6 +45,6 @@ class CustomUserAdmin(UserAdmin):
     #fieldset은 나만의 section을 만들수 있고,확장가능
      # => 반드시 튜플로 되어있어야 하고 그안에 또 튜플이 있어야 한다
 
-    list_display=("username","email","name","is_host")
+    list_display=("username","email","name","is_host","gender")
     #수정화면 말고 처음 화면에 보여지는 순서 조정할 수 있다
     

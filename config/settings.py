@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 #항상 app을 등록하기 위해 만든파일을 알려줘야 함
 CUSTOM_APPS = [
-    'houses.apps.HousesConfig',
     "users.apps.UsersConfig"
 ]
 
