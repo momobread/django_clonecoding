@@ -10,3 +10,11 @@ class WishlistsAdmin(admin.ModelAdmin):
         "created_at",
         "updated_at"
                     )
+    
+    
+
+
+
+
+
+
