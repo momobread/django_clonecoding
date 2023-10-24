@@ -70,6 +70,5 @@ class ReviewAdmin(admin.ModelAdmin):
                  #room__category__asksdskd__ggkgkgkg
                  "room__pet_friendly",
                  WordFilter,
-                 ratingFilter,
-                 
-                 )
+                 ratingFilter,      
+    )
